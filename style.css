@@ -1,0 +1,383 @@
+body {
+    font-family: 'Roboto', "Our First Kiss", sans-serif;
+}
+
+nav {
+    padding: 10px;
+    background: #FFFFFF;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    z-index: 3;
+}
+
+strong {
+    font-weight: 500;
+    color: #000000;
+}
+
+.nav-desktop {
+    display: none;
+}
+
+.side-bar {
+    display: none;
+}
+
+.icon {
+    height: 24px;
+}
+
+
+.stories {
+    height: 118px;
+    background: #FAFAFA;
+    display: flex;
+    gap: 15px;
+    overflow: hidden;
+    position: relative;
+    width: 100vw;
+    border: 1px solid #DBDBDB;
+}
+.story {
+    width: 66px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    left: 15px;
+}
+
+.story p {
+    font-size: 12px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+}
+.stories-background {
+    border-radius: 50%;
+    height: 66px;
+    position: relative;
+    bottom: 9px;
+    left: 0;
+    z-index: 0;
+}
+
+.story-following {
+    position: absolute;
+    top: 15px;
+    left: 5px;
+    z-index: 1;
+}
+
+.arrow {
+    display: none;
+}
+
+main {
+    margin-top: 64px;
+}
+
+.post:last-of-type {
+    margin-bottom: 45px;
+}
+
+.post > img {
+    width: 100%;
+}
+
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+.following {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.following p {
+    padding: 10px;
+}
+
+.post-middle {
+    padding: 10px 15px;
+}
+
+.post-icons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.post-actions img:nth-of-type(2) {
+    padding: 0 15px;
+}
+
+.likes {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 0 0 2px;
+}
+
+.likes p {
+    font-weight: 300;
+    padding-left: 10px;
+}
+
+.blank {
+    height: 75px;
+    background: #FAFAFA;
+    border: 1px solid #DBDBDB;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-top: 1px solid #DBDBDB;
+    background: #FFFFFF;
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+video {
+    width: 100%;
+}
+
+.comment {
+    margin-top: 5px;
+    padding: 10px;
+    border-top: 1px solid #DBDBDB;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.comment > div {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+button {
+    background: #FFFFFF;
+    border: none;
+}
+
+.comment input {
+    font-size: 14px;
+    border: none;
+    padding: 0;
+    background: #FFFFFF;
+}
+
+.send-post {
+    color: #B2DFFC;
+    font-weight: 500;
+}
+
+.send-post:hover {
+    transition: 300ms;
+    color: #0095F6;
+}
+
+@media (min-width: 614px) {
+
+    body {
+        background: #E5E5E5;
+    }
+
+    nav, .stories, .post {
+        background: #FFFFFF;
+    }
+
+    .nav-mobile {
+        display: none;
+    }
+
+    .nav-desktop {
+        display: initial;
+    }
+
+    .nav-desktop div {
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+    .left-nav, .right-nav {
+        display: flex;
+        align-items: center;
+    }
+
+    .left-nav .icon {
+        border-right: 1px solid #DBDBDB;
+        padding-right: 10px;
+        margin-right: 10px;
+    }
+
+    input {
+        text-align: center;
+        background: #FAFAFA;
+        border: 1px solid #DBDBDB;
+        padding: 10px 40px;
+        border-radius: 5px;
+    }
+
+    .right-nav .icon {
+        padding-left: 20px;
+    }
+
+    .stories {
+        width: 614px;
+    }
+
+    .arrow {
+        display: initial;
+        height: 26px;
+        position: relative;
+        left: 580px;
+        bottom:75px;
+        filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, 1));
+        z-index: 2;
+    }
+
+    main {
+        width: 614px;
+        margin: 70px auto auto;
+
+    }
+
+    .post > img {
+        width: 614px;
+    }
+
+    .post {
+        width: 614px;
+        margin-top: 25px;
+        border: 1px solid #DBDBDB;
+        border-radius: 5px;
+    }
+
+
+    .blank, footer {
+        display: none;
+    }
+}
+
+@media (min-width: 935px) {
+    nav {
+        justify-content: space-evenly;
+    }
+
+    .nav-desktop > div {
+        width: 935px;
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+    }
+
+    .side-bar {
+        width: 293px;
+        padding: 25px;
+    }
+
+    main {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        margin-top: 70px;
+    }
+
+    .side-bar {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .side-bar p {
+        color: #8E8E8E;
+        font-size: 12px;
+    }
+
+    .yourself {
+        display: flex;
+        align-items: center;
+        position: fixed;
+    }
+
+    .yourself p {
+        font-weight: 300;
+        padding-left: 15px;
+    }
+    .suggestions {
+        width: 293px;
+        position: fixed;
+        margin-top: 50px;
+    }
+
+    .suggestions > p {
+        font-weight: 500;
+    }
+
+    .suggestions strong {
+        font-size: 14px;
+    }
+
+    .following-suggestion {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 20px;
+    }
+
+    .following-suggestion > div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .user {
+        padding-left: 20px;
+    }
+
+    .user p {
+        padding-bottom: 5px;
+    }
+
+    a {
+        font-size: 12px;
+        font-weight: 500;
+        color: #139EF2;
+        text-decoration: none;
+        padding-top: 10px;
+    }
+
+    .disclaimer p:first-of-type {
+        width: 293px;
+        font-size: 11px;
+        margin-top: 400px;
+        position: fixed;
+
+    }
+
+    .disclaimer p:last-of-type {
+        width: 293px;
+        font-size: 11px;
+        margin-top: 450px;
+        position: fixed;
+    }
+}
